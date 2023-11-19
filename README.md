@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The dataset for this projest is sourced from food.com, and consists of two files. One file contains recipe information, and the other contains ratings submitted by food.com users who cooked the recipes.
+The dataset for this project is sourced from food.com, and consists of two files. One file contains recipe information, and the other contains ratings submitted by food.com users who cooked the recipes.
 
 The recipes dataframe contains data including recipe names, recipe IDs, preparation time, the submission data of the recipe, food.com tags, and nutritional value. The dataframe has a shape of (83782, 12), meaning that there are 83,782 recipes and each recipe has 12 data categories.
 
