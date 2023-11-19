@@ -78,6 +78,12 @@ Now that my data had been cleaned, this is the dataframe I had:
 | 306168 |        40 |         6 | ["'frozen broccoli cuts'", " 'cream of chicken soup'", " 'sharp cheddar cheese'", " 'garlic powder'", " 'ground black pepper'", " 'salt'", " 'milk'", " 'soy sauce'", " 'french-fried onions'"]          |               9 |        5 | I made this for my son's first birthday party this weekend. Our guests INHALED it! Everyone kept saying how delicious it was. I was I could have gotten to try it.                                                                                                                                                                               |                   5 |
 | 306168 |        40 |         6 | ["'frozen broccoli cuts'", " 'cream of chicken soup'", " 'sharp cheddar cheese'", " 'garlic powder'", " 'ground black pepper'", " 'salt'", " 'milk'", " 'soy sauce'", " 'french-fried onions'"]          |               9 |        5 | Loved this.  Be sure to completely thaw the broccoli.  I didn&#039;t and it didn&#039;t get done in time specified.  Just cooked it a little longer though and it was perfect.  Thanks Chef.                                                                                                                                                     |                   5 |
 
+Note that the text in the 3rd row of the `review` column is quite long, and therefore takes up space in 3 rows.
+
+### Univariate Analysis
+
+<iframe src="assets/n_steps_dist.html" width=800 height=600 frameBorder=0></iframe>
+
 ## Assessment of Missingness
 
 ## Hypothesis Testing
