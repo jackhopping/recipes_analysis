@@ -84,14 +84,26 @@ Note that the text in the 3rd row of the `review` column is quite long, and ther
 
 The plot embedded below shows the distribution of `n_steps`, the number of steps in each recipe that was reviewed.
 
-<iframe src="recipes_analysis/assets/n_steps_dist.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/n_steps_dist.html" width=800 height=600 frameBorder=0></iframe>
 
 The plot shows that the distribution of `n_steps` is skewed right. The graph is centered around 7, and most of the values are between 3 and 12.
 
 ### Bivariate Analysis
 
-The plot embedded below shows the relationship between `
+The plot embedded below shows the relationship between `avg recipe rating` and `n_steps`.
+
+<iframe src="assets/rating-vs-steps.html" width=800 height=600 frameBorder=0></iframe>
+
+The scatter plot shows a weak positive relationship between the number of ingredients and the average rating of each recipe.
 
 ## Assessment of Missingness
+
+### NMAR Analysis
+
+The missingness of the `review` column is probably dependent on people's opinion of the recipe. Someone who did not like the recipe is not likely to bother taking the time to review it. On the other hand, someone who enjoyed the recipe will probably take the time to show their appreciation by leaving a review. This could cause the average review per recipe to be biased high. A way to obtain additional data to make the missingness in the `review` column MAR is to make leaving a review mandatory for food.com guests.
+
+### Missingness Dependency
+
+
 
 ## Hypothesis Testing
