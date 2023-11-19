@@ -64,7 +64,7 @@ I notice that the "tags", "nutrition", "steps", and "ingredients" columns are al
  ('avg recipe rating', numpy.float64)]
 ```
 
-My last step in data cleaning was to get rid of columns that not necessary for my analysis. The columns that I dropped from the dataset were: `"contributor_id"`, `"submitted"`, `"date"`, `"nutrition"`, `"tags"`, `"name"`, `"user_id"`, `"recipe_id"`, `"description"`, and `"steps"`.
+My last step in data cleaning was to get rid of columns that are not necessary for my analysis. The columns that I dropped from the dataset were: `"contributor_id"`, `"submitted"`, `"date"`, `"nutrition"`, `"tags"`, `"name"`, `"user_id"`, `"recipe_id"`, `"description"`, and `"steps"`.
 
 Now that my data had been cleaned, this is the dataframe I had:
 
