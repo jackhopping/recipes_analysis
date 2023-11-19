@@ -20,7 +20,7 @@ My next step was to find the average rating per recipe, stored in a Series, and 
 
 After finding the average rating per recipe, I wanted to double check the data types of each column to make sure that they were cast as I expected.
 
-'''yml
+'
 [('name', str),
  ('id', numpy.int64),
  ('minutes', numpy.int64),
@@ -39,7 +39,7 @@ After finding the average rating per recipe, I wanted to double check the data t
  ('rating', numpy.float64),
  ('review', str),
  ('avg recipe rating', numpy.float64)]
-'''
+'
 
 ## Assessment of Missingness
 
