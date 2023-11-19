@@ -84,7 +84,7 @@ Note that the text in the 3rd row of the `review` column is quite long, and ther
 
 The plot embedded below shows the distribution of `n_steps`, the number of steps in each recipe that was reviewed.
 
-<iframe src="assets/n_steps_dist.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="recipes_analysis/assets/n_steps_dist.html" width=800 height=600 frameBorder=0></iframe>
 
 The plot shows that the distribution of `n_steps` is skewed right. The graph is centered around 7, and most of the values are between 3 and 12.
 
