@@ -94,7 +94,7 @@ The plot embedded below shows the relationship between `avg recipe rating` and `
 
 <iframe src="assets/rating-vs-steps.html" width=800 height=600 frameBorder=0></iframe>
 
-The scatter plot shows a weak positive relationship between the number of ingredients and the average rating of each recipe.
+The scatter plot shows a weak positive relationship between the number of steps and the average rating of each recipe.
 
 ## Assessment of Missingness
 
@@ -131,3 +131,13 @@ I used a permutation test to shuffle the `rating_missing` column 1000 times, obt
 From this permutation test, I calculated a p-value of 0.0. At the 1% significance level, I can reject the null hypothesis and can conclude that the missingness of the `rating` column is dependent on the `nsteps` column.
 
 ## Hypothesis Testing
+
+The question that I aim to answer in the hypthosis testing section is the question I stated at the beginning of my analysis: What is the relationship between the number of steps a recipe has and the recipe's rating?
+
+In order to answer this question, I first want to look at the distribution of `n_steps` and `rating`. This plot is also shown the [bivariate analysis](#bivariate-analysis) section, but I embedded it again for reference below:
+
+<iframe src="assets/rating-vs-steps.html" width=800 height=600 frameBorder=0></iframe>
+
+The plot shows a weak positive relationship between the number of steps and the average rating of each recipe. From this plot, I hypothesize that recipes with more steps will have higher average ratings.
+
+In my univariate analysis of the `n_steps` column I found that most recipes have between 3 and 12 steps. For 
