@@ -104,6 +104,18 @@ The missingness of the `review` column is probably dependent on people's opinion
 
 ### Missingness Dependency
 
+I ran permutation tests at the 1% significance level to determine if the missingness of `rating` is dependent on the `minutes` column and on the `n_steps` column.
 
+#### Rating and Minutes Permutation Test
+
+Null Hypothesis: The distribution of `minutes` when `rating` is missing is the same as the distribution of `minutes` when `rating` is not missing.
+
+Alternative Hypothesis: The distribution of `minutes` when `rating` is missing is different than the distribution of `minutes` when `rating` is not missing.
+
+I used a permutation test to shuffle the `rating` column 1000 times, obtaining 1000 test statistics measuring the absolute value of the difference in means. The plot below shows the distribution of the test statistics obtained from this permutation.
+
+<iframe src="assets/rating-and-mins-permutation.html" width=800 height=600 frameBorder=0></iframe>
+
+From this permutation test, I calculated a p-value of 0.112. At the 1% significance level, I fail to reject the null hypothesis and I cannot conclude that the  `rating` column is dependent on the `minutes` column.
 
 ## Hypothesis Testing
