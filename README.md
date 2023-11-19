@@ -140,4 +140,30 @@ In order to answer this question, I first want to look at the distribution of `n
 
 The plot shows a weak positive relationship between the number of steps and the average rating of each recipe. From this plot, I hypothesize that recipes with more steps will have higher average ratings.
 
-In my univariate analysis of the `n_steps` column I found that most recipes have between 3 and 12 steps. For 
+In my [univariate analysis](#univariate-analysis) of the `n_steps` column I found that most recipes have between 3 and 12 steps. For my hypothesis test, I will say that a recipe with a "high" number of steps is one where `n_steps >= 12`.
+
+I selected the `n_steps` and `avg recipe rating` columns, as well as added a column called `high_n` that is True if a recipe has 12 or more steps and False otherwise.
+
+|   n_steps |   avg recipe rating | high_n   |
+|----------:|--------------------:|:---------|
+|        10 |                   4 | False    |
+|        12 |                   5 | True     |
+|         6 |                   5 | False    |
+|         6 |                   5 | False    |
+|         6 |                   5 | False    |
+
+Null Hypothesis: The distribution of `avg recipe rating` when `n_steps >= 12` will be the same as the distribution of `avg recipe rating` when `n_steps < 12`.
+
+Alternative Hypothesis: The distribution of `avg recipe rating` when `n_steps >= 12` will be different than the distribution of `avg recipe rating` when `n_steps < 12`.
+
+I will use a 1% significance level for this test.
+
+The test statistic I will use for this analysis is absolute value of the difference of means.
+
+The observed absolute value of difference of means between recipes where `high_n == True` and where `high_n == False` is 0.00383.
+
+I used a permutation test to shuffle the `high_n` column 1000 times, obtaining 1000 test statistics measuring the absolute value of the difference in means. The plot below shows the distribution of the test statistics obtained from this permuation compared to the observed value.
+
+<iframe src="assets/hyp_test_hist.html" width=800 height=600 frameBorder=0></iframe>
+
+From this permutation test, I calculated a p-value of 0.104. At the 1% significance level, I fail to reject the null hypothesis and cannot conclude that the average rating of a recipe is dependent on whether it has a high number of steps.
