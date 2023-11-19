@@ -128,7 +128,7 @@ I used a permutation test to shuffle the `rating_missing` column 1000 times, obt
 
 <iframe src="assets/rating-and-nsteps-permutation.html" width=800 height=600 frameBorder=0></iframe>
 
-From this permutation test, I calculated a p-value of 0.0. At the 1% significance level, I can reject the null hypothesis and can conclude that the missingness of the `rating` column is dependent on the `nsteps` column.
+From this permutation test, I calculated a p-value of 0.0. At the 1% significance level, I can reject the null hypothesis and can conclude that the missingness of the `rating` column is dependent on the `n_steps` column.
 
 ## Hypothesis Testing
 
