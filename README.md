@@ -104,7 +104,7 @@ The missingness of the `review` column is probably dependent on people's opinion
 
 ### Missingness Dependency
 
-I ran permutation tests at the 1% significance level to determine if the missingness of `rating` is dependent on the `minutes` column and on the `n_steps` column.
+I ran permutation tests at the 1% significance level to determine if the missingness of `rating` is dependent on the `minutes` column and on the `n_steps` column. As part of the setup for these tests, I created a column called `rating_missing` that is `True` when the `rating` column has a null value and `False` otherwise.
 
 #### Rating and Minutes Permutation Test
 
@@ -112,10 +112,22 @@ Null Hypothesis: The distribution of `minutes` when `rating` is missing is the s
 
 Alternative Hypothesis: The distribution of `minutes` when `rating` is missing is different than the distribution of `minutes` when `rating` is not missing.
 
-I used a permutation test to shuffle the `rating` column 1000 times, obtaining 1000 test statistics measuring the absolute value of the difference in means. The plot below shows the distribution of the test statistics obtained from this permutation.
+I used a permutation test to shuffle the `rating_missing` column 1000 times, obtaining 1000 test statistics measuring the absolute value of the difference in means. The plot below shows the distribution of the test statistics obtained from this permutation compared to the observed value.
 
 <iframe src="assets/rating-and-mins-permutation.html" width=800 height=600 frameBorder=0></iframe>
 
-From this permutation test, I calculated a p-value of 0.112. At the 1% significance level, I fail to reject the null hypothesis and I cannot conclude that the  `rating` column is dependent on the `minutes` column.
+From this permutation test, I calculated a p-value of 0.112. At the 1% significance level, I fail to reject the null hypothesis and I cannot conclude that the missingness of the `rating` column is dependent on the `minutes` column.
+
+#### Rating and Number of Steps Permutation Test
+
+Null Hypothesis: The distribution of `n_steps` when `rating` is missing is the same as the distribution of `n_steps` when `rating` is not missing.
+
+Alternative Hypothesis: The distribution of `n_steps` when `rating` is missing is different than the distribution of `n_steps` when `rating` is not missing.
+
+I used a permutation test to shuffle the `rating_missing` column 1000 times, obtaining 1000 test statistics measuring the absolute value of the difference in means. The plot below shows the distribution of the test statistics obtained from this permuation compared to the observed value.
+
+<iframe src="assets/rating-and-nsteps-permutation.html" width=800 height=600 frameBorder=0></iframe>
+
+From this permutation test, I calculated a p-value of 0.0. At the 1% significance level, I can reject the null hypothesis and can conclude that the missingness of the `rating` column is dependent on the `nsteps` column.
 
 ## Hypothesis Testing
