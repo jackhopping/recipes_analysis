@@ -20,6 +20,27 @@ My next step was to find the average rating per recipe, stored in a Series, and 
 
 After finding the average rating per recipe, I wanted to double check the data types of each column to make sure that they were cast as I expected.
 
+'''yml
+[('name', str),
+ ('id', numpy.int64),
+ ('minutes', numpy.int64),
+ ('contributor_id', numpy.int64),
+ ('submitted', str),
+ ('tags', str),
+ ('nutrition', str),
+ ('n_steps', numpy.int64),
+ ('steps', str),
+ ('description', str),
+ ('ingredients', str),
+ ('n_ingredients', numpy.int64),
+ ('user_id', numpy.float64),
+ ('recipe_id', numpy.float64),
+ ('date', str),
+ ('rating', numpy.float64),
+ ('review', str),
+ ('avg recipe rating', numpy.float64)]
+'''
+
 ## Assessment of Missingness
 
 ## Hypothesis Testing
